@@ -2,7 +2,7 @@ const fs = require('fs');
 const url = require('url');
 const net = require('net');
 if (process.argv.length <= 2) {
-	console.log("node HTTP-RAW.js url time");
+	console.log("node http.js url time");
 	console.log("i love bruno mars");
 	process.exit(-1);
 }
