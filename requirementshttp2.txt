@@ -1,0 +1,1 @@
+npm install request && npm install randomstring && npm install fake-useragent
