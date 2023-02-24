@@ -1,1 +1,2 @@
 node http2 <url> <time> <threads> <proxylist> <rate>
+same shit
