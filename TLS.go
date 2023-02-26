@@ -102,7 +102,7 @@ func http2(wg * sync.WaitGroup, target string, rps int) {
 func main() {
     rand.Seed(time.Now().UnixNano())
     if len(os.Args) < 5 {
-        fmt.Println("[FIX] go run TLS.go target time ratelimit proxyfile threads | Fix | Corrected - @MSIDSTRESS")
+        fmt.Println("[FIX] go run TLS.go <target> <time> <rate> <proxy> <threads>")
         return
     }
     var target string
