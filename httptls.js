@@ -153,7 +153,7 @@ const dateObj = new Date();
                     host: parsed.host,
                     ciphers: cipper, 
                     secureProtocol: 'TLS_method',
-                    TLS_MAX_VERSION: '1.2',
+                    TLS_MAX_VERSION: '1.3',
                     servername: parsed.host,
                     secure: true,
                     rejectUnauthorized: false,
