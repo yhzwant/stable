@@ -13,7 +13,7 @@ const net = require("net");
  process.on('uncaughtException', function (exception) {
   });
 
- if (process.argv.length < 7){console.log(`Usage: node TLS-TELEDOG.js target time rate thread proxyfile`); process.exit();}
+ if (process.argv.length < 7){console.log(`Usage: node tlspro.js target time rate thread proxyfile`); process.exit();}
  const headers = {};
   function readLines(filePath) {
      return fs.readFileSync(filePath, "utf-8").toString().split(/\r?\n/);
