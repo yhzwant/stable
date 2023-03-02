@@ -1,8 +1,3 @@
-/**
- * 
- * @Http2 Whit Tls 1.3
- * 
- */
 
  const net = require("net");
  const http2 = require("http2");
