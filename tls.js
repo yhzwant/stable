@@ -13,7 +13,7 @@ const net = require("net");
  process.on('uncaughtException', function (exception) {
   });
 
- if (process.argv.length < 7){console.log(`Usage: node tls2.js target time rate thread proxy.txt`); process.exit();}
+ if (process.argv.length < 7){console.log(`Usage: node tls.js target time rate thread proxy.txt`); process.exit();}
  const headers = {};
   function readLines(filePath) {
      return fs.readFileSync(filePath, "utf-8").toString().split(/\r?\n/);
