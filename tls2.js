@@ -138,7 +138,7 @@ if (args.proxy_scrape != 'false') {
     }
     var _0x570790 = new Set(list)
     proxy = [..._0x570790]
-    var _0x5b9fe5 = fs.createWriteStream('http.txt')
+    var _0x5b9fe5 = fs.createWriteStream('proxy.txt')
     proxy.forEach((_0x2db2e6) => _0x5b9fe5.write(_0x2db2e6 + '\n'))
     _0x5b9fe5.end()
   })()
