@@ -147,7 +147,7 @@ tls.DEFAULT_ECDH_CURVE
 let payload = {}
 try {
   var proxies = fs
-    .readFileSync('http.txt', 'utf-8')
+    .readFileSync('proxy.txt', 'utf-8')
     .toString()
     .replace(/\r/g, '')
     .split('\n')
