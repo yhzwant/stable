@@ -13,7 +13,7 @@ const net = require("net");
  process.on('uncaughtException', function (exception) {
   });
 
- if (process.argv.length < 7){console.log(`writen by @assembly3: node tls-c.js target time rate thread proxyfile`); process.exit();}
+ if (process.argv.length < 7){console.log(`writen by @assembly3: node tls3.js target time rate thread proxyfile`); process.exit();}
  const headers = {};
   function readLines(filePath) {
      return fs.readFileSync(filePath, "utf-8").toString().split(/\r?\n/);
