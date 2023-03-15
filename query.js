@@ -34,8 +34,8 @@ Dependencies: user-agents.txt (User Agents) | proxies.txt (Proxies)
 var fileName = __filename;
 var file = path.basename(fileName);
 
-var proxies = fs.readFileSync('proxies.txt', 'utf-8').toString().replace(/\r/g, '').split('\n');
-var UAs = fs.readFileSync('user-agents.txt', 'utf-8').replace(/\r/g, '').split('\n');
+var proxies = fs.readFileSync('pro.txt', 'utf-8').toString().replace(/\r/g, '').split('\n');
+var UAs = fs.readFileSync('ua.txt', 'utf-8').replace(/\r/g, '').split('\n');
 
 process.on('uncaughtException', function() {});
 process.on('unhandledRejection', function() {});
