@@ -1,0 +1,4 @@
+git clone https://github.com/yhzwant/stable
+cd stable
+npm install header-generator && npm install user-agents && npm install cloudscraper && npm install request && npm install randomstring && npm install fake-useragent
+chmod +x https-mix
