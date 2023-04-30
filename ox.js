@@ -53,7 +53,7 @@ const net = require("net");
  });
  
 function stopFlooder() {
-    console.log("t.me/dosleak | Stopping...");
+    console.log("Stopping...");
     process.exit();
 }
 
