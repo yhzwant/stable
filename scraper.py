@@ -33,12 +33,12 @@ for proxy in proxies:
             good_proxies.append(proxy)
             print("Proxy {proxy} is working! Response time: {(time.time() - start) * 1000:.2}ms")
     except:
-        print(f"Proxy {proxy} is not working.")
+        print("Proxy {proxy} is not working.")
 with open("proxy.txt", "w") as f:
     for proxy in good_proxies:
-        f.write(f"{proxy}\n")
+        f.write("{proxy}")
 
-print(f"{len(good_proxies)} good proxies have been saved to proxy.txt")
+print("{len(good_proxies)} good proxies have been saved to proxy.txt")
 
 ssh = paramiko.SSHClient()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
