@@ -23,19 +23,19 @@ for url in urls:
         proxies.extend(extracted_proxies)
 
 check_url = "https://www.google.com/"
-good_proxies = []
+proxy = []
 
 for proxy in proxies:
     start = time.time()
     try:
         response = requests.get(check_url, proxies={"http": proxy})
         if response.status_code == 200:
-            good_proxies.append(proxy)
-            print("Proxy {proxy} is working! Response time: {(time.time() - start) * 1000:.2}ms")
+            proxy.append(proxy)
+            print("checking proxies!")
     except:
         print("Proxy {proxy} is not working.")
 with open("proxy.txt", "w") as f:
-    for proxy in good_proxies:
+    for proxy in proxy:
         f.write("{proxy}")
 
 print("{len(good_proxies)} good proxies have been saved to proxy.txt")
