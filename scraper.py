@@ -6,9 +6,12 @@ import paramiko
 # URL TO SCRAPE PROXIES
 urls = [
     "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all",
-    "http://www.example2.com/proxies",
-    "http://www.example3.com/proxies",
-    "http://www.example4.com/proxies",
+    "https://proxyspace.pro/http.txt",
+    "https://raw.githubusercontent.com/Zaeem20/FREE_PROXIES_LIST/master/https.txt",
+    "https://raw.githubusercontent.com/Zaeem20/FREE_PROXIES_LIST/master/http.txt",
+    "https://raw.githubusercontent.com/saisuiu/Lionkings-Http-Proxys-Proxies/main/free.txt",
+    "https://raw.githubusercontent.com/tahaluindo/Free-Proxies/main/proxies/http.txt",
+    "https://raw.githubusercontent.com/proxy4parsing/proxy-list/main/http.txt",
 ]
 
 proxies = []
@@ -31,18 +34,18 @@ for proxy in proxies:
             print(f"Proxy {proxy} is working! Response time: {(time.time() - start) * 1000:.2f}ms")
     except:
         print(f"Proxy {proxy} is not working.")
-with open("good_proxies.txt", "w") as f:
+with open("proxy.txt", "w") as f:
     for proxy in good_proxies:
         f.write(f"{proxy}\n")
 
-print(f"{len(good_proxies)} good proxies have been saved to good_proxies.txt")
+print(f"{len(good_proxies)} good proxies have been saved to proxy.txt")
 
 ssh = paramiko.SSHClient()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 ssh.connect("IP", port=22, username="root", password="PASSWORD")
 
 sftp = ssh.open_sftp()
-sftp.put("good_proxies.txt", "/home/narul/good_proxies.txt")
+sftp.put("proxy.txt", "/home/narul/proxy.txt")
 sftp.close()
 
 ssh.close()
