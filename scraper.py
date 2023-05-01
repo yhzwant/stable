@@ -31,7 +31,7 @@ for proxy in proxies:
         response = requests.get(check_url, proxies={"http": proxy})
         if response.status_code == 200:
             good_proxies.append(proxy)
-            print(f"Proxy {proxy} is working! Response time: {(time.time() - start) * 1000:.2f}ms")
+            print("Proxy {proxy} is working! Response time: {(time.time() - start) * 1000:.2}ms")
     except:
         print(f"Proxy {proxy} is not working.")
 with open("proxy.txt", "w") as f:
@@ -45,7 +45,7 @@ ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 ssh.connect("IP", port=22, username="root", password="PASSWORD")
 
 sftp = ssh.open_sftp()
-sftp.put("proxy.txt", "/home/narul/proxy.txt")
+sftp.put("proxy.txt", "/home/stable/proxy.txt")
 sftp.close()
 
 ssh.close()
