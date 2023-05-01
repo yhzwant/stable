@@ -7,9 +7,6 @@ import paramiko
 urls = [
     "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all",
     "https://proxyspace.pro/http.txt",
-    "https://raw.githubusercontent.com/Zaeem20/FREE_PROXIES_LIST/master/https.txt",
-    "https://raw.githubusercontent.com/Zaeem20/FREE_PROXIES_LIST/master/http.txt",
-    "https://raw.githubusercontent.com/saisuiu/Lionkings-Http-Proxys-Proxies/main/free.txt",
     "https://raw.githubusercontent.com/tahaluindo/Free-Proxies/main/proxies/http.txt",
     "https://raw.githubusercontent.com/proxy4parsing/proxy-list/main/http.txt",
 ]
